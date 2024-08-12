@@ -9,17 +9,14 @@ $$
 
 where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 
-## Boundary Conditions
-
 The boundary conditions for the problem are:
 
 $$
 u(0,t) = 0 \\
 $$
+$$
 u(1,t) = 0
 $$
-
-## Initial Conditions
 
 The initial conditions are:
 
