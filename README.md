@@ -21,8 +21,10 @@ $$
 The initial conditions are:
 
 $$
+\begin{cases}
 u(x,0) = x(1 - x) \\
 \frac{\partial u(x,0)}{\partial t} = 0
+\end{cases}
 $$
 
 ## Domain
