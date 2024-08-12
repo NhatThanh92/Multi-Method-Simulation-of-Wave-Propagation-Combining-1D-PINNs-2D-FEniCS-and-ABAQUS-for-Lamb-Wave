@@ -127,6 +127,46 @@ $$
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 ## 2. FEniCS (2D wave propagation) 
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Wave Equation Explanation for FEniCS}
+The wave equation in two dimensions is defined as:
+
+\begin{equation}
+\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \left( \frac{\partial^2 u(x,t)}{\partial x^2} + \frac{\partial^2 u(x,t)}{\partial y^2} \right)
+\end{equation}
+
+\section{Deriving the Weak Form of the Equations}
+(Here, you would include the steps to derive the weak form of the wave equation.)
+
+\section{Initial and Boundary Conditions}
+
+\subsection{Initial Conditions}
+The initial conditions are given as:
+\begin{equation}
+u(x, 0) = 0 \quad \text{for all } x \in \Omega
+\end{equation}
+\begin{equation}
+\frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } x \in \Omega
+\end{equation}
+
+\subsection{Boundary Conditions}
+The boundary conditions are defined as follows:
+\begin{equation}
+u(x, t) = 0 \quad \text{for all } x \in \partial\Omega \text{ except at a source point on the left edge}
+\end{equation}
+For the source point on the left edge (\( x = 0 \)), the boundary condition is:
+\begin{equation}
+u(0, t) = c \cdot \sin(10 \cdot t)
+\end{equation}
+
+All other initial conditions are zero.
+
+\end{document}
+
 ![t-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe962ebc-ea4a-44d2-a70f-c44e7998822a)
 
 ## 3. ABAQUS( Lamb wave propagation)
