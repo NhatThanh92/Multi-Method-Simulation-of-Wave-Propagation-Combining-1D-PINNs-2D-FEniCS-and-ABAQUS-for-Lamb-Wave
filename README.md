@@ -24,7 +24,7 @@ $$
 $$
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 $$
-### Solution Approach
+### Analytical solution
 
 **Separation of Variables**
 
