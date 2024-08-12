@@ -14,6 +14,7 @@ The boundary conditions for the problem are:
 $$
 \begin{cases}
 u(0,t) = 0 \\
+
 u(1,t) = 0
 \end{cases}
 $$
