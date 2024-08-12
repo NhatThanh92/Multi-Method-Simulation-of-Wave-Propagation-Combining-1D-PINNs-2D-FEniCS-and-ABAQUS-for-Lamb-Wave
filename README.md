@@ -128,6 +128,7 @@ $$
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 ## 2. FEniCS (2D wave propagation) 
 \documentclass{article}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -139,9 +140,41 @@ $$
 \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \left( \frac{\partial^2 u(x,t)}{\partial x^2} + \frac{\partial^2 u(x,t)}{\partial y^2} \right)
 $$
 
+where \( u(x,t) \) is the wave function, \( x \) and \( y \) are the spatial coordinates, \( t \) is time, and \( c \) is the wave speed.
+
 \section{Deriving the Weak Form of the Equations}
 
-(Here, you would include the steps to derive the weak form of the wave equation.)
+To derive the weak form of the wave equation, follow these steps:
+
+1. **Multiply by a Test Function**: Multiply the wave equation by a test function \( v(x, y) \) and integrate over the domain \( \Omega \):
+
+    $$
+    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = c^2 \int_\Omega v \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \, d\Omega
+    $$
+
+2. **Apply Integration by Parts**: Use integration by parts to move the derivatives off the solution \( u \) and onto the test function \( v \). This is done to reduce the order of the derivatives on \( u \):
+
+    $$
+    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = -c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega + c^2 \int_{\partial \Omega} v \frac{\partial u}{\partial n} \, d\Gamma
+    $$
+
+    Here, \( \nabla u \cdot \nabla v \) is the dot product of the gradients, and \( \frac{\partial u}{\partial n} \) represents the normal derivative on the boundary \( \partial \Omega \).
+
+3. **Enforce Boundary Conditions**: The boundary integral term \( \int_{\partial \Omega} v \frac{\partial u}{\partial n} \, d\Gamma \) will vanish for Dirichlet boundary conditions where \( u \) is fixed on \( \partial \Omega \). Thus, the weak form simplifies to:
+
+    $$
+    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = -c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega
+    $$
+
+4. **Final Weak Form**: The final weak form of the wave equation becomes:
+
+    $$
+    \text{Find } u \in H^1(\Omega) \text{ such that for all } v \in H^1(\Omega),
+    $$
+
+    $$
+    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega + c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega = 0
+    $$
 
 \section{Initial and Boundary Conditions}
 
@@ -150,11 +183,11 @@ $$
 The initial conditions are given as:
 
 $$
-u(x, 0) = 0 \quad \text{for all } x \in \Omega
+u(x, 0) = x(1-x) \quad \text{for all } 0 < x < 1
 $$
 
 $$
-\frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } x \in \Omega
+\frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } 0 < x < 1
 $$
 
 \subsection{Boundary Conditions}
@@ -162,16 +195,14 @@ $$
 The boundary conditions are defined as follows:
 
 $$
-u(x, t) = 0 \quad \text{for all } x \in \partial\Omega \text{ except at a source point on the left edge}
+u(0, t) = 0 \quad \text{and} \quad u(1, t) = 0 \quad \text{for all } t > 0
 $$
 
-For the source point on the left edge (\( x = 0 \)), the boundary condition is:
+Additionally, for a source point on the left edge (\( x = 0 \)), the boundary condition is:
 
 $$
 u(0, t) = c \cdot \sin(10 \cdot t)
 $$
-
-All other initial conditions are zero.
 
 \end{document}
 
