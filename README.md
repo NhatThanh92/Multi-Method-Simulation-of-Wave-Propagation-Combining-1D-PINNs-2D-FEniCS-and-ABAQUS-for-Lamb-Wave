@@ -18,12 +18,19 @@ u(1,t) = 0
 \end{cases}
 $$
 
-The initial conditions are:
 $$
 \begin{cases}
-u(x,0) = x(1 - x) \text{ for } 0 < x < 1 
+u(x,0) = x(1 - x) \text{ for } 0 < x < 1 \\
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 \end{cases}
 $$
+
+The initial conditions are:
+
+$$
+u(x,0) = x(1 - x) \text{ for } 0 < x < 1 \\
+\frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
+$$
+
 ## 2. FEniCS (2D wave propagation) 
 ## 3. ABAQUS( Lamb wave propagation)
