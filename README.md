@@ -30,9 +30,7 @@ $$
 
 Assume a solution of the form:
 
-$$
 u(x, t) = X(x) T(t)
-$$
 
 Substitute this into the PDE:
 
