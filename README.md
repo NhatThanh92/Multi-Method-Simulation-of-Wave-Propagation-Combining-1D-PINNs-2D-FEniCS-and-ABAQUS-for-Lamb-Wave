@@ -121,8 +121,10 @@ Thus, \($B_n = 0$ \) for all \(n\).
 Given \(c = 1\), the solution simplifies to:
 
 $$
-u(x, t) = \sum_{k=1, \text{ odd}}^{\infty} \frac{8}{k^3 \pi^3} \sin(k \pi x) \cos(k \pi t)
+u(x, t) = \sum_{n=1, \text{ odd}}^{\infty} \frac{8}{n^3 \pi^3} \sin(n \pi x) \cos(n \pi t)
 $$
+### Results
+![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 
 ## 2. FEniCS (2D wave propagation) 
 ## 3. ABAQUS( Lamb wave propagation)
