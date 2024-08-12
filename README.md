@@ -20,10 +20,10 @@ $$
 
 The initial conditions are:
 $$
-\begin{case}
+\begin{cases}
 u(x,0) = x(1 - x) \text{ for } 0 < x < 1 
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
-\end{case}
+\end{cases}
 $$
 ## 2. FEniCS (2D wave propagation) 
 ## 3. ABAQUS( Lamb wave propagation)
