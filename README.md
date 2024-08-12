@@ -127,4 +127,6 @@ $$
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 ## 2. FEniCS (2D wave propagation) 
+![videomp4-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ec60d9a4-22c2-4f2f-ab3a-3aefea433af1)
+
 ## 3. ABAQUS( Lamb wave propagation)
