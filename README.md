@@ -125,6 +125,6 @@ u(x, t) = \sum_{n=1, \text{ odd}}^{\infty} \frac{8}{n^3 \pi^3} \sin(n \pi x) \co
 $$
 ### Results
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
-
+**Fig 1. The comparison of PINNs results with the Analytical solution.**
 ## 2. FEniCS (2D wave propagation) 
 ## 3. ABAQUS( Lamb wave propagation)
