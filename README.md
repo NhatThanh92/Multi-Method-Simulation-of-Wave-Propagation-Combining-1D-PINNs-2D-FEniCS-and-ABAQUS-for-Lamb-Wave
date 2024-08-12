@@ -1,7 +1,7 @@
 # Wave-propagation
 ## 1. Physics-Informed Neural Networks (1D Wave) 
 ### Problem Statement
-The 1D wave equation is given by:
+**The 1D wave equation is given by:**
 
 $$
 \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \text{ for } 0 < x < 1 \text{ and }  t > 0
@@ -9,13 +9,13 @@ $$
 
 where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 
-The boundary conditions for the problem are:
+**The boundary conditions for the problem are:**
 
 $$
 u(0,t) = u(1,t) = 0 \text{ for } t > 0
 $$
 
-The initial conditions are:
+**The initial conditions are:**
 
 $$
 u(x,0) = x(1 - x) \text{ for } 0 < x < 1
@@ -24,7 +24,7 @@ $$
 $$
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 $$
-# Solution Approach
+### Solution Approach
 
 **Separation of Variables**
 
@@ -46,7 +46,7 @@ $$
 \frac{1}{T(t)} \frac{d^2 T(t)}{dt^2} = c^2 \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -\lambda
 $$
 
-where \(\lambda\) is a separation constant.
+where \( \lambda\ ) is a separation constant.
 
 This leads to two ordinary differential equations:
 
