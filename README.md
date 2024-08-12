@@ -74,7 +74,7 @@ where \($\lambda$ = $(n \pi)^2$ \) and \(n\) is a positive integer. This choice 
 
 **Solve for \(T(t)\)**
 
-Substitute \(\lambda = (n \pi)^2\):
+Substitute  \($\lambda$ = $(n \pi)^2$ \):
 
 $$
 \frac{d^2 T(t)}{dt^2} + (n \pi c)^2 T(t) = 0
@@ -102,7 +102,7 @@ $$
 u(x, 0) = \sum_{n=1}^{\infty} A_n \sin(n \pi x) = x (1 - x)
 $$
 
-To find \(A_n\), use the Fourier series expansion:
+To find \($A_n$ \), use the Fourier series expansion:
 
 $$
 A_n = \frac{2}{1 - 0} \int_{0}^{1} x (1 - x) \sin(n \pi x) \, dx
@@ -110,13 +110,13 @@ $$
 
 Calculate this integral to get \(A_n\), but here you already know the provided solution form.
 
-Apply \(\frac{\partial u}{\partial t} (x, 0) = 0\):
+Apply \($\frac{\partial u}{\partial t} (x, 0) = 0$ \):
 
 $$
 \frac{\partial u}{\partial t} (x, 0) = \sum_{n=1}^{\infty} B_n (n \pi c) \sin(n \pi x) = 0
 $$
 
-Thus, \(B_n = 0\) for all \(n\).
+Thus, \($B_n = 0$ \) for all \(n\).
 
 Given \(c = 1\), the solution simplifies to:
 
