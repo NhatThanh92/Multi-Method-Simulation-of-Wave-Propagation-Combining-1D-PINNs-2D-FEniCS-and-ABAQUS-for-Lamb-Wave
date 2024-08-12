@@ -3,8 +3,8 @@
 ### Problem Statement
 #### Partial Differential Equation (PDE):
 
-\[\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}\]
-
+$\[\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}\]$
+\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
 #### Boundary Conditions:
 
 \[u(0,t) = 0 \quad \text{and} \quad u(1,t) = 0\]
