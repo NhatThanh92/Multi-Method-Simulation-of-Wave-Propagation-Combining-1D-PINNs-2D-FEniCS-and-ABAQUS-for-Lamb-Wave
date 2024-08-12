@@ -13,7 +13,6 @@ The boundary conditions for the problem are:
 
 $$
 u(0,t) = 0 \\
-
 u(1,t) = 0
 $$
 
