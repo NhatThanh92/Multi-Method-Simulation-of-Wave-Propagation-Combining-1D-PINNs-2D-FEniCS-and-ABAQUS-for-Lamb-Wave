@@ -30,7 +30,9 @@ $$
 
 Assume a solution of the form:
 
+$$
 u(x, t) = X(x) T(t)
+$$
 
 Substitute this into the PDE:
 
@@ -44,7 +46,7 @@ $$
 \frac{1}{T(t)} \frac{d^2 T(t)}{dt^2} = c^2 \frac{1}{X(x)} \frac{d^2 X(x)}{dx^2} = -\lambda
 $$
 
-where \( \lambda\ ) is a separation constant.
+where \( \lambda \ ) is a separation constant.
 
 This leads to two ordinary differential equations:
 
