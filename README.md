@@ -1,103 +1,29 @@
 # Wave-propagation
 ## 1. Physics-Informed Neural Networks (1D Wave) 
-Problem Statement
-PDE:
+### Problem Statement
 
-∂
-2
-𝑢
-∂
-𝑡
-2
-=
-𝑐
-2
-∂
-2
-𝑢
-∂
-𝑥
-2
-∂t 
-2
- 
-∂ 
-2
- u
-​
- =c 
-2
-  
-∂x 
-2
- 
-∂ 
-2
- u
-​
- 
-Boundary Conditions:
+#### Partial Differential Equation (PDE):
 
-𝑢
-(
-0
-,
-𝑡
-)
-=
-0
-and
-𝑢
-(
-1
-,
-𝑡
-)
-=
-0
-u(0,t)=0andu(1,t)=0
-Initial Conditions:
+\[
+\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
+\]
 
-𝑢
-(
-𝑥
-,
-0
-)
-=
-𝑥
-(
-1
-−
-𝑥
-)
-u(x,0)=x(1−x)
+#### Boundary Conditions:
 
-∂
-𝑢
-∂
-𝑡
-(
-𝑥
-,
-0
-)
-=
-0
-∂t
-∂u
-​
- (x,0)=0
-where 
-0
-<
-𝑥
-<
-1
-0<x<1 and 
-𝑡
->
-0
-t>0.
+\[
+u(0,t) = 0 \quad \text{and} \quad u(1,t) = 0
+\]
+
+#### Initial Conditions:
+
+\[
+u(x,0) = x(1 - x)
+\]
+
+\[
+\frac{\partial u}{\partial t}(x, 0) = 0
+\]
+
+where \( 0 < x < 1 \) and \( t > 0 \).
 ## 2. FEniCS (2D wave propagation) 
 ## 3. ABAQUS( Lamb wave propagation)
