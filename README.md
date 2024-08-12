@@ -12,9 +12,11 @@ where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 The boundary conditions for the problem are:
 
 $$
-u(0,t) = u(1,t) = 0 \ text{ for } t > 0
+u(0,t) = u(1,t) = 0 \text{ for } t > 0
 $$
+
 The initial conditions are:
+
 $$
 u(x,0) = x(1 - x) \text{ for } 0 < x < 1
 $$
