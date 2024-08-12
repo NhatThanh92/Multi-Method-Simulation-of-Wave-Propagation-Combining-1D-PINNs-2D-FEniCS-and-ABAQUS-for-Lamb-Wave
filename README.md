@@ -70,7 +70,7 @@ $$
 X(x) = \sin(n \pi x)
 $$
 
-where \(\lambda = (n \pi)^2\) and \(n\) is a positive integer. This choice satisfies the boundary conditions.
+where \($\lambda$ = $(n \pi)^2$ \) and \(n\) is a positive integer. This choice satisfies the boundary conditions.
 
 **Solve for \(T(t)\)**
 
