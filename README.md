@@ -12,8 +12,10 @@ where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 The boundary conditions for the problem are:
 
 $$
+\begin{cases}
 u(0,t) = 0 \\
 u(1,t) = 0
+\end{cases}
 $$
 
 The initial conditions are:
