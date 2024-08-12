@@ -4,7 +4,7 @@
 The 1D wave equation is given by:
 
 $$
-\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}
+\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \text{ for } 0 < x < 1 and t > 0
 $$
 
 where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
