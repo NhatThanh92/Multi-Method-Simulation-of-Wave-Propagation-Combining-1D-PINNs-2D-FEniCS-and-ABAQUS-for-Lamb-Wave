@@ -146,16 +146,18 @@ v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
 3. Integrate over the domain \( \Omega \):
+
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
 $$
-4. Apply integration by parts to the Laplacian term:
+
+5. Apply integration by parts to the Laplacian term:
    \[
    - \int_\Omega v \nabla^2 u \, d\Omega = \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
    \]
    Assuming homogeneous Neumann boundary conditions (\( \nabla u \cdot n = 0 \) on \( \partial\Omega \)), the boundary integral vanishes.
 
-5. The final weak form is:
+6. The final weak form is:
    \[
    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega + c^2 \int_\Omega \nabla v \cdot \nabla u \, d\Omega = 0
    \]
