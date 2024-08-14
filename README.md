@@ -152,8 +152,6 @@ $$
 u(x,y, 0) = 0 \quad \text{and} \quad \frac{\partial u(x, y, 0)}{\partial t} = 0
 $$
 
-This implies that the initial displacement and initial velocity are both zero.
-
 **2.3 Boundary Conditions with Source term**
 
 Dirichlet Boundary Condition: On the left boundary (where x = -1; y = 0), we have a source that enforces $u(t) = c \cdot \sin(10 \cdot t)$
