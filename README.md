@@ -155,7 +155,6 @@ $$
 3. Apply integration by parts to the Laplacian term:
    
 $$
-
 \int_\Omega v \nabla^2 u \, d\Omega 
 $$
 
