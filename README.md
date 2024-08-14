@@ -214,5 +214,6 @@ $$
 
 ## 3. ABAQUS( Lamb wave propagation)
 
-https://github.com/user-attachments/assets/8f315dcc-28de-454b-85df-5181e9cdd435
+![lambwave-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/85837a91-95b0-42d9-8b13-18832828ef99)
+
 
