@@ -149,7 +149,7 @@ $\Omega$ = [-1, 1] x [-1, 1]
 The initial conditions are given by:
 
 $$
-u(x,y, 0) = 0 \quad \text{and} \frac{\partial u(x, y, 0)}{\partial t} = 0
+u(x,y, 0) = 0 \quad \text{and} \quad \frac{\partial u(x, y, 0)}{\partial t} = 0
 $$
 
 This implies that the initial displacement and initial velocity are both zero.
