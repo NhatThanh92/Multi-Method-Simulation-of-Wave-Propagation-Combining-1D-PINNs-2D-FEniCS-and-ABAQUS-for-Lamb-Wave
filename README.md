@@ -1,6 +1,6 @@
 # Wave-propagation
 ## 1. Physics-Informed Neural Networks (1D Wave) 
-**1.1 Problem Statement**
+### 1.1 Problem Statement
 
 The 1D wave equation is given by:
 
@@ -10,7 +10,7 @@ $$
 
 where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 
-**1.2 The Inital and boundary conditions for the problem are**
+### 1.2 The Inital and boundary conditions for the problem are
 
 $$
 u(0,t) = u(1,t) = 0 \text{ for } t > 0
@@ -24,7 +24,7 @@ $$
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 $$
 
-**1.3 Analytical solution**
+### 1.3 Analytical solution
 
 **Separation of Variables**
 
@@ -124,7 +124,7 @@ $$
 u(x, t) = \sum_{n=1, \text{ odd}}^{\infty} \frac{8}{n^3 \pi^3} \sin(n \pi x) \cos(n \pi t)
 $$
 
-**1.4 Results**
+### 1.4 Results
 
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
@@ -139,12 +139,12 @@ $$
 
 where \( u(x,y,t) \) represents the wave function, and \( c \) is the wave speed.
 
-**2.1 Geometry**
+### 2.1 Geometry
 
 The geometry is a rectangular domain defined by:
 $\Omega$ = [-1, 1] x [-1, 1]
 
-**2.2 Initial Conditions**
+### 2.2 Initial Conditions
 
 The initial conditions are given by:
 
@@ -152,11 +152,11 @@ $$
 u(x,y, 0) = 0 \quad \text{and} \quad \frac{\partial u(x, y, 0)}{\partial t} = 0
 $$
 
-**2.3 Boundary Conditions with Source term**
+### 2.3 Boundary Conditions with Source term
 
 Dirichlet Boundary Condition: On the left boundary (where x = -1; y = 0), we have a source that enforces $u(t) = c \cdot \sin(10 \cdot t)$
 
-**2.4 Weak Formulation**
+### 2.4 Weak Formulation
 
 **1. Time Discetization**
 
@@ -212,7 +212,7 @@ $$
 L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \ d\Omega
 $$
 
-**2.5 Results**
+### 2.5 Results
 
 ![t-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe962ebc-ea4a-44d2-a70f-c44e7998822a)
 
