@@ -149,13 +149,13 @@ $$
 2. Integrate over the domain \( $\Omega$ \):
 
 $$
-\int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
+\int_\Omega v \frac{\partial^2 u}{\partial t^2} \ d\Omega - c^2 \int_\Omega v \nabla^2 u \ d\Omega = 0
 $$
 
 3. Apply integration by parts to the Laplacian term:
    
 $$
-\int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \, d\Omega 
+\int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
 $$
 
 = \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
