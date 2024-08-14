@@ -155,10 +155,10 @@ $$
 **3. Apply integration by parts to the Laplacian term:**
    
 $$
-- \int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
+\int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
 $$
 
-Here, $\cdot n$ is the outward-pointing normal vector on the boundary  $\partial\Omega$ and $\nabla u \cdot n $ represents the normal derivative on the boundary. 
+Here, n is the outward-pointing normal vector on the boundary  $\partial\Omega$ and $\nabla u \cdot n $ represents the normal derivative on the boundary. \\
 Assuming homogeneous Neumann boundary conditions (\( $\nabla u \cdot n = 0$ \) on \( $\partial\Omega$ \)), the boundary integral vanishes.
 
 6. The final weak form is:
