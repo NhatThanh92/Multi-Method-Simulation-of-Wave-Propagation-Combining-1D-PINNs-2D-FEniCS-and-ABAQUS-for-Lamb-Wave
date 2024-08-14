@@ -138,8 +138,28 @@ $$
 $$
 
 where \( u(x,y,t) \) represents the wave function, and \( c \) is the wave speed.
+**2.1 Geometry**
 
-**2.1 Time Discetization**
+The geometry is a rectangular domain defined by:
+$\Omega$ = [-1, 1] x [-1, 1]
+
+**2.2 Initial Conditions**
+
+The initial conditions are given by:
+
+$$
+u(x,y, 0) = 0 \text{and} \frac{\partial u(x, y, 0)}{\partial t} = 0
+$$
+
+This implies that the initial displacement and initial velocity are both zero.
+
+**2.3 Boundary Conditions with Source term**
+
+Dirichlet Boundary Condition: On the left boundary (where x = -1; y = 0), we have a source that enforces $u(-1, 0, t) = c \cdot \sin(10 \cdot t)$
+
+**2.4 Weak Formulation**
+
+**Time Discetization**
 
 We first discretize the wave equation in time. Let \($\Delta t$ \) represent the time step. The second derivative with respect to time can be approximated using a finite difference scheme. For instance:
 
@@ -159,7 +179,7 @@ $$
 u^{n+1} - 2u^n + u^{n-1} = \Delta t^2 c^2 \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right)
 $$
 
-**2.2 Weak Form Derivation**
+**Weak Form Derivation**
 
 Next, we multiply both sides by a test function \(v(x, y)\) and integrate over the spatial domain \($\Omega$ \) to derive the weak form.
 
@@ -167,7 +187,7 @@ $$
 \int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \ d\Omega = \Delta t^2 c^2 \int_\Omega v \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right) \ d\Omega
 $$
 
-**2.3 Applying Integration by Parts**
+**Applying Integration by Parts**
 
 The term involving the spatial derivatives can be integrated by parts to shift the derivatives from \($u^n$ \) to the test function \(v\). Assuming Dirichlet boundary conditions:
 
@@ -193,21 +213,6 @@ $$
 L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \ d\Omega
 $$
 
-**2.4 The Initial and Boundary conditions are given as:**
-
-$$
-u(x,y, 0) = \frac{\partial u(x, y, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1; -1 < y < 1
-$$
-
-$$
-u(x, y, t) = 0 \quad \text{for all } t > 0
-$$
-
-Additionally, for a source point on the left edge (x =0), the boundary condition is:
-
-$$
-u(0, t) = c \cdot \sin(10 \cdot t)
-$$
 
 
 ![t-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe962ebc-ea4a-44d2-a70f-c44e7998822a)
