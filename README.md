@@ -179,13 +179,13 @@ Final Weak Form
 
 In the notation used for finite element implementations:
 
-- **Bilinear Form** \(a(u_h^n, v_h)\):
+- **Bilinear Form** \($a(u_h^n, v_h)$ \):
 
 $$
 a(u_h^n, v_h) = \int_\Omega v_h u_h^{n+1} \, d\Omega + \Delta t^2 c^2 \int_\Omega \nabla v_h \cdot \nabla u_h^n \, d\Omega
 $$
 
-- **Linear Form** \(L(v_h)\):
+- **Linear Form** \($L(v_h)$ \):
 
 $$
 L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \, d\Omega
