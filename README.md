@@ -137,7 +137,7 @@ $$
 
 where \( u(x,y,t) \) represents the wave function, and \( c \) is the wave speed.
 
-**Time Discetization**
+**2.1 Time Discetization**
 
 We first discretize the wave equation in time. Let \($\Delta t$ \) represent the time step. The second derivative with respect to time can be approximated using a finite difference scheme. For instance:
 
@@ -147,45 +147,49 @@ $$
 
 Substituting this into the wave equation:
 
-\[
+$$
 \frac{u^{n+1} - 2u^n + u^{n-1}}{\Delta t^2} = c^2 \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right)
-\]
+$$
 
-Multiplying both sides by \(\Delta t^2\):
+Multiplying both sides by \($\Delta t^2$ \):
 
-\[
+$$
 u^{n+1} - 2u^n + u^{n-1} = \Delta t^2 c^2 \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right)
-\]
-
-1. Multiply by a test function \( v \):
-   
-$$
-v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
-2. Integrate over the domain \( $\Omega$ \):
+**2.2 Weak Form Derivation**
+
+Next, we multiply both sides by a test function \(v(x, y)\) and integrate over the spatial domain \($\Omega$ \) to derive the weak form.
 
 $$
-\int_\Omega v \frac{\partial^2 u}{\partial t^2} \ d\Omega - c^2 \int_\Omega v \nabla^2 u \ d\Omega = 0
+\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \, d\Omega = \Delta t^2 c^2 \int_\Omega v \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right) \, d\Omega
 $$
 
-3. Apply integration by parts to the Laplacian term:
-   
+**2.3 Applying Integration by Parts**
+
+The term involving the spatial derivatives can be integrated by parts to shift the derivatives from \($u^n$ \) to the test function \(v\). Assuming Dirichlet boundary conditions:
+
 $$
-\int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
+\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \, d\Omega = -\Delta t^2 c^2 \int_\Omega \nabla v \cdot \nabla u^n \, d\Omega
 $$
 
-Here, $n$ is the outward-pointing normal vector on the boundary  $\partial\Omega$ and $\nabla u \cdot n$ represents the normal derivative on the boundary. 
+This equation represents the weak form of the time-discretized 2D wave equation.
 
-Assuming homogeneous Neumann boundary conditions (\( $\nabla u \cdot n = 0$ \) on \( $\partial\Omega$ \)), the boundary integral vanishes.
+Final Weak Form
 
-6. The final weak form is:
-   \[
-   \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega + c^2 \int_\Omega \nabla v \cdot \nabla u \, d\Omega = 0
-   \]
+In the notation used for finite element implementations:
 
-\end{document}
+- **Bilinear Form** \(a(u_h^n, v_h)\):
 
+$$
+a(u_h^n, v_h) = \int_\Omega v_h u_h^{n+1} \, d\Omega + \Delta t^2 c^2 \int_\Omega \nabla v_h \cdot \nabla u_h^n \, d\Omega
+$$
+
+- **Linear Form** \(L(v_h)\):
+
+$$
+L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \, d\Omega
+$$
 
 The initial conditions are given as:
 
