@@ -196,7 +196,7 @@ $$
 **2.4 The Initial and Boundary conditions are given as:**
 
 $$
-u(x,y, 0) = \frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1
+u(x,y, 0) = \frac{\partial u(x, y, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1; -1 < y < 1
 $$
 
 $$
