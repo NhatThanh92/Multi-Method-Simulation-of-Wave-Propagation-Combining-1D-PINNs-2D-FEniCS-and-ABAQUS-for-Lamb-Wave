@@ -175,7 +175,7 @@ $$
 
 This equation represents the weak form of the time-discretized 2D wave equation.
 
-Final Weak Form
+**Final Weak Form**
 
 In the notation used for finite element implementations:
 
@@ -191,31 +191,22 @@ $$
 L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \, d\Omega
 $$
 
-The initial conditions are given as:
+The Initial and Boundary conditions are given as:
 
 $$
-u(x, 0) = x(1-x) \quad \text{for all } 0 < x < 1
+u(x,y 0) = \frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1
 $$
-
-$$
-\frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } 0 < x < 1
-$$
-
-\subsection{Boundary Conditions}
-
-The boundary conditions are defined as follows:
 
 $$
 u(0, t) = 0 \quad \text{and} \quad u(1, t) = 0 \quad \text{for all } t > 0
 $$
 
-Additionally, for a source point on the left edge (\( x = 0 \)), the boundary condition is:
+Additionally, for a source point on the left edge (x =0), the boundary condition is:
 
 $$
 u(0, t) = c \cdot \sin(10 \cdot t)
 $$
 
-\end{document}
 
 ![t-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe962ebc-ea4a-44d2-a70f-c44e7998822a)
 
