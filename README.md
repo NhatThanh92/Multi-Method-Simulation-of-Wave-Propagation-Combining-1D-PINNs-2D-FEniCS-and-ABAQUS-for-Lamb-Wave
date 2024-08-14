@@ -140,9 +140,11 @@ where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 The weak form is derived as follows:
 
 1. Multiply by a test function \( v \):
+   
 $$
 \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0 
 $$
+
 3. Integrate over the domain \( \Omega \):
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
