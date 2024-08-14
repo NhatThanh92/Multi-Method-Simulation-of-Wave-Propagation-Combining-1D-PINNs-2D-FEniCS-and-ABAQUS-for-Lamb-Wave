@@ -1,6 +1,6 @@
 # Wave-propagation
 ## 1. Physics-Informed Neural Networks (1D Wave) 
-### Problem Statement
+**1.1 Problem Statement**
 **The 1D wave equation is given by:**
 
 $$
@@ -9,13 +9,11 @@ $$
 
 where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 
-**The boundary conditions for the problem are:**
+**1.2 The Inital and boundary conditions for the problem are**
 
 $$
 u(0,t) = u(1,t) = 0 \text{ for } t > 0
 $$
-
-**The initial conditions are:**
 
 $$
 u(x,0) = x(1 - x) \text{ for } 0 < x < 1
@@ -24,7 +22,7 @@ $$
 $$
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 $$
-### Analytical solution
+**1.3 Analytical solution**
 
 **Separation of Variables**
 
@@ -50,13 +48,13 @@ where \( $\lambda$ \) is a separation constant.
 
 This leads to two ordinary differential equations:
 
-1. For \(T(t)\):
+**For \(T(t)\):**
 
 $$
 \frac{d^2 T(t)}{dt^2} + \lambda T(t) = 0
 $$
 
-2. For \(X(x)\):
+**For \(X(x)\):**
 
 $$
 \frac{d^2 X(x)}{dx^2} + \frac{\lambda}{c^2} X(x) = 0
@@ -123,7 +121,7 @@ Given \(c = 1\), the solution simplifies to:
 $$
 u(x, t) = \sum_{n=1, \text{ odd}}^{\infty} \frac{8}{n^3 \pi^3} \sin(n \pi x) \cos(n \pi t)
 $$
-### Results
+**1.4 Results**
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 
@@ -162,7 +160,7 @@ $$
 Next, we multiply both sides by a test function \(v(x, y)\) and integrate over the spatial domain \($\Omega$ \) to derive the weak form.
 
 $$
-\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \, d\Omega = \Delta t^2 c^2 \int_\Omega v \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right) \, d\Omega
+\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \ d\Omega = \Delta t^2 c^2 \int_\Omega v \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right) \ d\Omega
 $$
 
 **2.3 Applying Integration by Parts**
@@ -170,7 +168,7 @@ $$
 The term involving the spatial derivatives can be integrated by parts to shift the derivatives from \($u^n$ \) to the test function \(v\). Assuming Dirichlet boundary conditions:
 
 $$
-\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \, d\Omega = -\Delta t^2 c^2 \int_\Omega \nabla v \cdot \nabla u^n \, d\Omega
+\int_\Omega v \left( u^{n+1} - 2u^n + u^{n-1} \right) \ d\Omega = -\Delta t^2 c^2 \int_\Omega \nabla v \cdot \nabla u^n \ d\Omega
 $$
 
 This equation represents the weak form of the time-discretized 2D wave equation.
@@ -182,16 +180,16 @@ In the notation used for finite element implementations:
 - **Bilinear Form** \($a(u_h^n, v_h)$ \):
 
 $$
-a(u_h^n, v_h) = \int_\Omega v_h u_h^{n+1} \, d\Omega + \Delta t^2 c^2 \int_\Omega \nabla v_h \cdot \nabla u_h^n \, d\Omega
+a(u_h^n, v_h) = \int_\Omega v_h u_h^{n+1} \ d\Omega + \Delta t^2 c^2 \int_\Omega \nabla v_h \cdot \nabla u_h^n \ d\Omega
 $$
 
 - **Linear Form** \($L(v_h)$ \):
 
 $$
-L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \, d\Omega
+L(v_h) = \int_\Omega v_h \left( 2u_h^n - u_h^{n-1} \right) \ d\Omega
 $$
 
-The Initial and Boundary conditions are given as:
+**2.4 The Initial and Boundary conditions are given as:**
 
 $$
 u(x,y 0) = \frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1
