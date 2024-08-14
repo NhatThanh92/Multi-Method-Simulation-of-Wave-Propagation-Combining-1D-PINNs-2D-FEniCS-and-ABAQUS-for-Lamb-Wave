@@ -213,3 +213,6 @@ $$
 ![t-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/fe962ebc-ea4a-44d2-a70f-c44e7998822a)
 
 ## 3. ABAQUS( Lamb wave propagation)
+
+https://github.com/user-attachments/assets/8f315dcc-28de-454b-85df-5181e9cdd435
+
