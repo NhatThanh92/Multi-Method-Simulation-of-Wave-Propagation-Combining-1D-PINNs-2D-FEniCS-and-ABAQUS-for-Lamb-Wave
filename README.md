@@ -156,9 +156,10 @@ $$
    
 $$
 
-\int_\Omega v \nabla^2 u \, d\Omega = \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
-
+\int_\Omega v \nabla^2 u \, d\Omega 
 $$
+
+= \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
 
    Assuming homogeneous Neumann boundary conditions (\( \nabla u \cdot n = 0 \) on \( \partial\Omega \)), the boundary integral vanishes.
 
