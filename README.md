@@ -126,6 +126,7 @@ $$
 ### Results
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
+
 ## 2. FEniCS (2D wave propagation) 
 
 The wave equation in two dimensions is defined as:
@@ -145,17 +146,20 @@ $$
 v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
-3. Integrate over the domain \( $\Omega$ \):
+2. Integrate over the domain \( $\Omega$ \):
 
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
 $$
 
-5. Apply integration by parts to the Laplacian term:
+3. Apply integration by parts to the Laplacian term:
+   
+$$
    \[
    - \int_\Omega v \nabla^2 u \, d\Omega = \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
    \]
    Assuming homogeneous Neumann boundary conditions (\( \nabla u \cdot n = 0 \) on \( \partial\Omega \)), the boundary integral vanishes.
+$$
 
 6. The final weak form is:
    \[
