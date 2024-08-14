@@ -2,7 +2,7 @@
 ## 1. Physics-Informed Neural Networks (1D Wave) 
 **1.1 Problem Statement**
 
-**The 1D wave equation is given by:**
+The 1D wave equation is given by:
 
 $$
 \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \text{ for } 0 < x < 1 \text{ and }  t > 0
