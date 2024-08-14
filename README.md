@@ -196,11 +196,11 @@ $$
 **2.4 The Initial and Boundary conditions are given as:**
 
 $$
-u(x,y 0) = \frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1
+u(x,y, 0) = \frac{\partial u(x, 0)}{\partial t} = 0 \quad \text{for all } -1 < x < 1
 $$
 
 $$
-u(0, t) = 0 \quad \text{and} \quad u(1, t) = 0 \quad \text{for all } t > 0
+u(x, y, t) = 0 \quad \text{for all } t > 0
 $$
 
 Additionally, for a source point on the left edge (x =0), the boundary condition is:
