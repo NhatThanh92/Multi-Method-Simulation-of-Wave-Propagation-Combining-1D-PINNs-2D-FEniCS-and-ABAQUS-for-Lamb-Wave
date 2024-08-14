@@ -132,13 +132,30 @@ $$
 The wave equation in two dimensions is defined as:
 
 $$
-\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \left( \frac{\partial^2 u(x,t)}{\partial x^2} + \frac{\partial^2 u(x,t)}{\partial y^2} \right)
+\frac{\partial^2 u(x,y,t)}{\partial t^2} = c^2 \left( \frac{\partial^2 u(x,y,t)}{\partial x^2} + \frac{\partial^2 u(x,yt)}{\partial y^2} \right)
 $$
 
-where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
+where \( u(x,y,t) \) represents the wave function, and \( c \) is the wave speed.
 
-### Deriving the Weak Form
-The weak form is derived as follows:
+**Time Discetization**
+
+We first discretize the wave equation in time. Let \($\Delta t$ \) represent the time step. The second derivative with respect to time can be approximated using a finite difference scheme. For instance:
+
+$$
+\frac{\partial^2 u}{\partial t^2} \approx \frac{u^{n+1} - 2u^n + u^{n-1}}{\Delta t^2}
+$$
+
+Substituting this into the wave equation:
+
+\[
+\frac{u^{n+1} - 2u^n + u^{n-1}}{\Delta t^2} = c^2 \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right)
+\]
+
+Multiplying both sides by \(\Delta t^2\):
+
+\[
+u^{n+1} - 2u^n + u^{n-1} = \Delta t^2 c^2 \left( \frac{\partial^2 u^n}{\partial x^2} + \frac{\partial^2 u^n}{\partial y^2} \right)
+\]
 
 1. Multiply by a test function \( v \):
    
