@@ -127,12 +127,6 @@ $$
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 ## 2. FEniCS (2D wave propagation) 
-\documentclass{article}
-\usepackage{amsmath}
-
-\begin{document}
-
-\section{Wave Equation Explanation for FEniCS}
 
 The wave equation in two dimensions is defined as:
 
@@ -140,7 +134,7 @@ $$
 \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \left( \frac{\partial^2 u(x,t)}{\partial x^2} + \frac{\partial^2 u(x,t)}{\partial y^2} \right)
 $$
 
-where \( u(x,t) \) is the wave function, \( x \) and \( y \) are the spatial coordinates, \( t \) is time, and \( c \) is the wave speed.
+where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 
 \section{Deriving the Weak Form of the Equations}
 
