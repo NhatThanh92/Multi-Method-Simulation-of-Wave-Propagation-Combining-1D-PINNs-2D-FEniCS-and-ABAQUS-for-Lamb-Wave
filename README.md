@@ -140,25 +140,25 @@ where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 ### Deriving the Weak Form
 The weak form is derived as follows:
 
-**1. Multiply by a test function \( v \):**
+1. Multiply by a test function \( v \):
    
 $$
 v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
-**2. Integrate over the domain \( $\Omega$ \):**
+2. Integrate over the domain \( $\Omega$ \):
 
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \ d\Omega - c^2 \int_\Omega v \nabla^2 u \ d\Omega = 0
 $$
 
-**3. Apply integration by parts to the Laplacian term:**
+3. Apply integration by parts to the Laplacian term:
    
 $$
 \int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
 $$
 
-Here, $n$ is the outward-pointing normal vector on the boundary  $\partial\Omega$ and $\nabla u \cdot n $ represents the normal derivative on the boundary. 
+Here, $n$ is the outward-pointing normal vector on the boundary  $\partial\Omega$ and $\nabla u \cdot n$ represents the normal derivative on the boundary. 
 
 Assuming homogeneous Neumann boundary conditions (\( $\nabla u \cdot n = 0$ \) on \( $\partial\Omega$ \)), the boundary integral vanishes.
 
@@ -169,39 +169,6 @@ Assuming homogeneous Neumann boundary conditions (\( $\nabla u \cdot n = 0$ \) o
 
 \end{document}
 
-1. **Multiply by a Test Function**: Multiply the wave equation by a test function \( v(x, y) \) and integrate over the domain \( \Omega \):
-
-    $$
-    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = c^2 \int_\Omega v \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \, d\Omega
-    $$
-
-2. **Apply Integration by Parts**: Use integration by parts to move the derivatives off the solution \( u \) and onto the test function \( v \). This is done to reduce the order of the derivatives on \( u \):
-
-    $$
-    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = -c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega + c^2 \int_{\partial \Omega} v \frac{\partial u}{\partial n} \, d\Gamma
-    $$
-
-    Here, \( \nabla u \cdot \nabla v \) is the dot product of the gradients, and \( \frac{\partial u}{\partial n} \) represents the normal derivative on the boundary \( \partial \Omega \).
-
-3. **Enforce Boundary Conditions**: The boundary integral term \( \int_{\partial \Omega} v \frac{\partial u}{\partial n} \, d\Gamma \) will vanish for Dirichlet boundary conditions where \( u \) is fixed on \( \partial \Omega \). Thus, the weak form simplifies to:
-
-    $$
-    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega = -c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega
-    $$
-
-4. **Final Weak Form**: The final weak form of the wave equation becomes:
-
-    $$
-    \text{Find } u \in H^1(\Omega) \text{ such that for all } v \in H^1(\Omega),
-    $$
-
-    $$
-    \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega + c^2 \int_\Omega \nabla u \cdot \nabla v \, d\Omega = 0
-    $$
-
-\section{Initial and Boundary Conditions}
-
-\subsection{Initial Conditions}
 
 The initial conditions are given as:
 
