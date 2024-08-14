@@ -142,7 +142,7 @@ The weak form is derived as follows:
 1. Multiply by a test function \( v \):
    
 $$
-\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0 
+v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
 3. Integrate over the domain \( \Omega \):
