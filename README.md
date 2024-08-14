@@ -138,6 +138,7 @@ $$
 $$
 
 where \( u(x,y,t) \) represents the wave function, and \( c \) is the wave speed.
+
 **2.1 Geometry**
 
 The geometry is a rectangular domain defined by:
