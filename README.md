@@ -1,6 +1,7 @@
 # Wave-propagation
 ## 1. Physics-Informed Neural Networks (1D Wave) 
 **1.1 Problem Statement**
+
 **The 1D wave equation is given by:**
 
 $$
