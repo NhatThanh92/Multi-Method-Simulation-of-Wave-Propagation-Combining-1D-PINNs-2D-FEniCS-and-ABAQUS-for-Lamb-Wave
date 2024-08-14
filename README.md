@@ -141,11 +141,11 @@ The weak form is derived as follows:
 
 1. Multiply by a test function \( v \):
 $$
-v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0 
+\frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0 
 $$
 3. Integrate over the domain \( \Omega \):
 $$
-   \[\int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0\]
+\int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
 $$
 4. Apply integration by parts to the Laplacian term:
    \[
