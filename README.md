@@ -23,6 +23,7 @@ $$
 $$
 \frac{\partial u(x,0)}{\partial t} = 0 \text{ for } t > 0
 $$
+
 **1.3 Analytical solution**
 
 **Separation of Variables**
@@ -122,7 +123,9 @@ Given \(c = 1\), the solution simplifies to:
 $$
 u(x, t) = \sum_{n=1, \text{ odd}}^{\infty} \frac{8}{n^3 \pi^3} \sin(n \pi x) \cos(n \pi t)
 $$
+
 **1.4 Results**
+
 ![image](https://github.com/user-attachments/assets/0594fc5a-c8fd-437f-be24-ff0cd02d05d0)
 **Fig 1. The comparison of PINNs results with the Analytical solution.**
 
