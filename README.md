@@ -140,27 +140,25 @@ where \( u(x,t) \) represents the wave function, and \( c \) is the wave speed.
 ### Deriving the Weak Form
 The weak form is derived as follows:
 
-1. Multiply by a test function \( v \):
+**1. Multiply by a test function \( v \):**
    
 $$
 v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
-2. Integrate over the domain \( $\Omega$ \):
+**2. Integrate over the domain \( $\Omega$ \):**
 
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \ d\Omega - c^2 \int_\Omega v \nabla^2 u \ d\Omega = 0
 $$
 
-3. Apply integration by parts to the Laplacian term:
+**3. Apply integration by parts to the Laplacian term:**
    
 $$
 \int_\Omega v \nabla^2 u \ d\Omega =  \int_\Omega \nabla v \cdot \nabla u \ d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
 $$
 
-= \int_\Omega \nabla v \cdot \nabla u \, d\Omega - \int_{\partial\Omega} v \nabla u \cdot n \, d\Gamma
-
-   Assuming homogeneous Neumann boundary conditions (\( \nabla u \cdot n = 0 \) on \( \partial\Omega \)), the boundary integral vanishes.
+Assuming homogeneous Neumann boundary conditions (\( $\nabla u \cdot n = 0$ \) on \( $\partial\Omega$ \)), the boundary integral vanishes.
 
 6. The final weak form is:
    \[
