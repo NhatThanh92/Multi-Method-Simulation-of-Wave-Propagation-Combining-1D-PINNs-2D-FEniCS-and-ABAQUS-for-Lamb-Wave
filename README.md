@@ -145,7 +145,7 @@ $$
 v \left( \frac{\partial^2 u}{\partial t^2} - c^2 \nabla^2 u \right) = 0
 $$
 
-3. Integrate over the domain \( \Omega \):
+3. Integrate over the domain \( $\Omega$ \):
 
 $$
 \int_\Omega v \frac{\partial^2 u}{\partial t^2} \, d\Omega - c^2 \int_\Omega v \nabla^2 u \, d\Omega = 0
